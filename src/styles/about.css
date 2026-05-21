@@ -1,0 +1,315 @@
+.about-page{
+  width:100%;
+  min-height:100vh;
+  background:#050505;
+  color:white;
+  padding:140px 7vw;
+  position:relative;
+  overflow:hidden;
+}
+
+/* AMBIENT LIGHTS */
+
+.ambient{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(140px);
+  opacity:0.08;
+  pointer-events:none;
+}
+
+.ambient-1{
+  width:400px;
+  height:400px;
+  background:#8b5cf6;
+  top:120px;
+  left:-120px;
+}
+
+.ambient-2{
+  width:500px;
+  height:500px;
+  background:#2563eb;
+  bottom:200px;
+  right:-180px;
+}
+
+/* HERO */
+
+.about-hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  position:relative;
+  z-index:2;
+}
+
+.tiny-intro{
+  font-size:0.7rem;
+  letter-spacing:4px;
+  opacity:0.45;
+  margin-bottom:60px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:180px;
+  align-items:center;
+}
+
+/* LEFT */
+
+.hero-left{
+  position:relative;
+  z-index:2;
+}
+
+.about-title{
+  font-size:clamp(5rem,10vw,9rem);
+  line-height:0.95;
+  font-weight:250;
+  letter-spacing:-7px;
+}
+
+.title-line{
+  width:120px;
+  height:1px;
+  background:rgba(255,255,255,0.12);
+  margin:40px 0;
+}
+
+.hero-subtext{
+  font-size:1.4rem;
+  line-height:1.8;
+  opacity:0.75;
+  max-width:500px;
+}
+
+/* RIGHT */
+
+.hero-right{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  gap:110px;
+}
+
+.hero-description{
+  font-size:1.45rem;
+  line-height:2;
+  opacity:0.55;
+  max-width:540px;
+}
+
+/* FEAST YOUR EYES */
+
+.feast-wrapper{
+  position:absolute;
+
+  left:-240px;
+  top:50%;
+
+  transform:translateY(-50%);
+
+  width:260px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  z-index:10;
+}
+
+.feast-line{
+  font-size:2.7rem;
+  line-height:0.9;
+
+  font-style:italic;
+  font-weight:400;
+
+  color:#f0abfc;
+
+  text-shadow:
+    0 0 10px rgba(240,171,252,0.55),
+    0 0 25px rgba(240,171,252,0.3),
+    0 0 50px rgba(240,171,252,0.15);
+
+  animation:floatGlow 4s ease-in-out infinite;
+}
+
+@keyframes floatGlow{
+
+  0%{
+    transform:translateY(0px);
+    opacity:0.7;
+  }
+
+  50%{
+    transform:translateY(-6px);
+    opacity:1;
+  }
+
+  100%{
+    transform:translateY(0px);
+    opacity:0.7;
+  }
+
+}
+
+/* SECTIONS */
+
+.content-section{
+  margin-top:220px;
+  position:relative;
+  z-index:2;
+}
+
+.section-top{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  margin-bottom:60px;
+}
+
+.section-number{
+  font-size:0.9rem;
+  opacity:0.35;
+}
+
+.section-label{
+  font-size:0.75rem;
+  letter-spacing:4px;
+  opacity:0.45;
+}
+
+.content-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:start;
+}
+
+.big-statement{
+  font-size:clamp(2.8rem,5vw,5rem);
+  line-height:1;
+  font-weight:250;
+  letter-spacing:-4px;
+}
+
+.section-paragraph{
+  font-size:1.35rem;
+  line-height:2;
+  opacity:0.82;
+}
+
+/* INTERESTS */
+
+.interests-layout{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:22px;
+}
+
+.interest-card{
+  padding:32px;
+
+  border:1px solid rgba(255,255,255,0.06);
+
+  background:rgba(255,255,255,0.02);
+
+  backdrop-filter:blur(20px);
+
+  font-size:1rem;
+  opacity:0.82;
+
+  transition:0.4s ease;
+}
+
+.interest-card:hover{
+  transform:translateY(-8px);
+
+  border-color:rgba(255,255,255,0.18);
+
+  background:rgba(255,255,255,0.04);
+}
+
+/* OBSESSIONS */
+
+.obsession-wrapper{
+  display:flex;
+  flex-direction:column;
+  gap:34px;
+}
+
+.obsession-wrapper span{
+  font-size:clamp(2rem,4vw,4.5rem);
+  font-weight:250;
+  letter-spacing:-3px;
+  line-height:1;
+  opacity:0.92;
+}
+
+/* END QUOTE */
+
+.end-quote{
+  padding:240px 0 120px;
+
+  text-align:center;
+
+  font-size:clamp(2.5rem,5vw,5rem);
+
+  line-height:1.2;
+
+  letter-spacing:-4px;
+
+  font-weight:250;
+
+  opacity:0.9;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:100px;
+  }
+
+  .content-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-title{
+    font-size:5rem;
+  }
+
+  .hero-description{
+    font-size:1.2rem;
+  }
+
+  .big-statement{
+    font-size:3rem;
+  }
+
+  .obsession-wrapper span{
+    font-size:2.5rem;
+  }
+
+  .end-quote{
+    font-size:2.5rem;
+  }
+
+  .feast-wrapper{
+    position:relative;
+    left:0;
+    top:0;
+    transform:none;
+    width:auto;
+    justify-content:flex-start;
+    margin-top:-20px;
+  }
+
+}
