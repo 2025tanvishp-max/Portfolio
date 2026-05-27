@@ -5,9 +5,9 @@ import Cursor from "./components/cursor"
 import Navbar from "./components/Navbar"
 import Loader from "./components/loader"
 
-import Home from "./pages/home"
-import Work from "./pages/work"
-import About from "./pages/about"
+import Home from "./pages/Home"
+import Work from "./pages/Work"
+import About from "./pages/About"
 import ProjectsPage from "./pages/ProjectsPage"
 import Contacts from "./pages/Contacts"
 
